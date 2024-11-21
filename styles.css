@@ -273,7 +273,7 @@ h1 {
 }
 
 .club-scroll-container::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar in webkit browsers */
+    display: none;
 }
 
 .org-titles{
@@ -320,7 +320,7 @@ h1 {
 
 .club-item:hover .club {
     transform: scale(1.05);
-    background-color: rgba(0, 0, 0, 0.5); /* Darken the card when hovered */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .club-description {
@@ -369,13 +369,13 @@ h1 {
 }
 
 .campus-map {
-    width: 400px; /* New width */
-    height: 600px; /* New height */
+    width: 400px;
+    height: 600px;
     object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
 
 .location-info {

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mapAreas.forEach(area => {
         area.addEventListener('mouseenter', function() {
             const description = area.getAttribute('data-description');
-            locationDescription.textContent = description;  // Update the description
+            locationDescription.textContent = description;
         });
     });
 });
