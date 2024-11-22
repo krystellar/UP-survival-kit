@@ -149,27 +149,65 @@
         </div>
     </div>
     
-    <div class="map"> 
+    <div class="map">
         <h1>University Map</h1>
-        <div class="map-container">
-            <img src="image map.jpg" usemap="#image-map" class="campus-map">
-            <map name="image-map">
-                <area target="" alt="Infirmary" title="Infirmary" href="" coords="94.375,440.75,20" shape="circle" class="map-area" data-description="Infirmary">
-                <area target="" alt="Kalimudan" title="Kalimudan" href="" coords="189.06,420.06,24.06" shape="circle" class="map-area" data-description="Kalimudan Building">
-                <area target="" alt="Dorm and ILC" title="Dorm and ILC" href="" coords="96.44,278.12,12.5" shape="circle" class="map-area" data-description="Dormitory and International Learning Center">
-                <area target="" alt="Admin / CHSS Bldg" title="Admin / CHSS Bldg" href="" coords="247.19,288.97,38.75" shape="circle" class="map-area" data-description="Admin and CHSS Building">
-                <area target="" alt="CSM" title="CSM" href="" coords="75.44,145.88,37.5" shape="circle" class="map-area" data-description="College of Science and Math">
-                <area target="" alt="Sports Complex" title="Sports Complex" href="" coords="104.38,78.64,5.625" shape="circle" class="map-area" data-description="Sports Complex">
-                <area target="" alt="Library" title="Library" href="" coords="199.44,228.81,14.06" shape="circle" class="map-area" data-description="University Library">
-                <area target="" alt="Cultural Complex" title="Cultural Complex" href="" coords="318.75,154.14,6.875" shape="circle" class="map-area" data-description="Cultural Complex">
-                <area target="" alt="SOM" title="SOM" href="" coords="342.5,282.52,5.31" shape="circle" class="map-area" data-description="School of Management">
-            </map>            
-        </div>
-        <div class="location-info">
-            <h3>Location Description</h3>
-            <p id="location-description">Hover over a map area to see the description.</p>
+        <div class="map-and-info-container">
+            <div class="map-container">
+                <img src="image map.jpg" usemap="#image-map" class="campus-map">
+                <map name="image-map">
+                    <area target="" alt="Kalimudan" title="Kalimudan" href="" coords="189.06,420.06,24.06" shape="circle" class="map-area" data-title="Kalimudan Building" data-description="Kalimudan Student Center is where food and drink stalls are located. Students usually spend their meal time here." data-image="kalimudan.jpg">
+                    <area target="" alt="Dorm and ILC" title="Dorm and ILC" href="" coords="96.44,278.12,12.5" shape="circle" class="map-area" data-title="Dormitory and Interactive Learning Center" data-description="Elias B Lopez Dormitory Hall provides accomodation for students. This is where the clinic is also located which is open from 8 AM - 5 PM during weekdays only.The Interactive Learning Center provides a dynamic educational environment designed to engage students in hands-on, technology-driven learning experiences." data-image="dorm.jpg">
+                    <area target="" alt="Admin / CHSS Bldg" title="Admin / CHSS Bldg" href="" coords="247.19,288.97,38.75" shape="circle" class="map-area" data-title="Admin and CHSS Building" data-description="Administrative offices, such as offices of registrar, cashier, student affairs, are located in this building. Subjects under the Humanities and Social Sciences are held in this building." data-image="admin_chss.jpg">
+                    <area target="" alt="CSM" title="CSM" href="" coords="75.44,145.88,37.5" shape="circle" class="map-area" data-title="College of Science and Math" data-description="Subjects under the Science and Mathematics are held in this building. This building houses several laboratories for hands-on discussions." data-image="csm.jpg">
+                    <area target="" alt="Sports Complex" title="Sports Complex" href="" coords="104.38,78.64,5.625" shape="circle" class="map-area" data-title="Sports Complex" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="sportscom.jpg">
+                    <area target="" alt="Library" title="Library" href="" coords="199.44,228.81,14.06" shape="circle" class="map-area" data-title="University Library" data-description="A dedicated space to the collection, preservation, and sharing of books, digital resources, and other educational materials. " data-image="library.jpg">
+                    <area target="" alt="Cultural Complex" title="Cultural Complex" href="" coords="318.75,154.14,6.875" shape="circle" class="map-area" data-title="Cultural Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="cultural complex.jpg">
+                    <area target="" alt="SOM" title="SOM" href="" coords="342.5,282.52,5.31" shape="circle" class="map-area" data-title="School of Management" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="som.jpg">
+                </map>            
+            </div>
+            <div class="location-info">
+                <h3 id="location-title">Location Description</h3>
+                <p id="location-description">Hover over a map area to see the description.</p>
+                <img id="location-image" src="">
+            </div>
         </div>
     </div>
+    
+    <div class="facilities">
+        <div class="facilities-container">
+            <h1>Office of Student Affairs Sections</h1>
+            <ul>
+                <li class="shs-container">
+                    <div class="shs-content">
+                        <h2>STUDENT HOUSING SECTION</h2>
+                        <address>Email: <a href="mailto:shs_upmindanao.osa@up.edu.ph">shs_upmindanao.osa@up.edu.ph</a></address>
+                    </div>
+                    <div class="shs-button">
+                        <a href="https://www2.upmin.edu.ph/images/2020/osa/STUDENT%20HOUSING%20%20SERVICES.pdf">
+                            <button class="gotoshs">Learn More</button>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <h2>SCHOLARSHIP AND FINANCIAL ASSISTANCE SECTION</h2>
+                    <address>Email: <a href="mailto:sfas_osa.upmindanao@up.edu.ph">sfas_osa.upmindanao@up.edu.ph</a></address>
+                </li>
+                <li>
+                    <h2>HEALTH SERVICES SECTION</h2>
+                    <address>Email: <a href="mailto:hss.upmindanao@up.edu.ph">hss.upmindanao@up.edu.ph</a></address>
+                </li>
+                <li>
+                    <h2>COUNSELING AND TESTING SECTION</h2>
+                    <address>Email: <a href="mailto:cts_osa.upmindanao@up.edu.ph">cts_osa.upmindanao@up.edu.ph</a></address>
+                </li>
+                <li>
+                    <h2>STUDENT ORGANIZATIONS AND ACTIVITIES SECTION</h2>
+                    <address>Email: <a href="mailto:soas_osa.upmindanao@up.edu.ph">soas_osa.upmindanao@up.edu.ph</a></address>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
     
     <script src="script.js"></script>
 </body>
