@@ -10,6 +10,10 @@
             const subjectsTable = document.getElementById("subjects-table");
             const gwaDisplay = document.getElementById("gwa-display");
             const addButton = document.getElementById("add-subject");
+            const resetButton = document.getElementById("reset-field");
+            const exportButton = document.getElementById("export-csv");
+            const importButton = document.getElementById("import-csv");
+            const fileInput = document.getElementById("file-input");
 
             let subjects = [];
 
@@ -26,16 +30,49 @@
                 gwaDisplay.textContent = gwa;
             }
 
-            function addSubjectRow(subjectName, subjectUnits, subjectGrade) {
-                const row = subjectsTable.insertRow();
+            function refreshTable() {
+                const tbody = subjectsTable.querySelector("tbody");
+                tbody.innerHTML = ""; // Clear existing rows to avoid duplication
 
-                const nameCell = row.insertCell(0);
-                const unitsCell = row.insertCell(1);
-                const gradeCell = row.insertCell(2);
+                subjects.forEach(({ name, units, grade }) => {
+                    const row = tbody.insertRow();
+                    const nameCell = row.insertCell(0);
+                    const unitsCell = row.insertCell(1);
+                    const gradeCell = row.insertCell(2);
 
-                nameCell.textContent = subjectName;
-                unitsCell.textContent = subjectUnits;
-                gradeCell.textContent = subjectGrade;
+                    nameCell.textContent = name;
+                    unitsCell.textContent = units;
+                    gradeCell.textContent = grade;
+                });
+
+                updateGWA(); // Update GWA after refreshing the table
+            }
+
+            function downloadCSV(filename, data) {
+                const blob = new Blob([data], { type: "text/csv" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+
+            function generateCSV() {
+                let csvContent = "Subject Name,Units,Final Grade\n";
+                subjects.forEach(({ name, units, grade }) => {
+                    csvContent += `${name},${units},${grade}\n`;
+                });
+                return csvContent;
+            }
+
+            function parseCSV(content) {
+                const rows = content.split("\n").slice(1); // Skip header
+                const parsedSubjects = rows.map(row => {
+                    const [name, units, grade] = row.split(",");
+                    return { name: name.trim(), units: parseFloat(units), grade: parseFloat(grade) };
+                }).filter(subject => subject.name && !isNaN(subject.units) && !isNaN(subject.grade));
+                return parsedSubjects;
             }
 
             addButton.addEventListener("click", () => {
@@ -53,13 +90,50 @@
                 }
 
                 subjects.push({ name: subjectName, units: subjectUnits, grade: subjectGrade });
+                refreshTable(); // Refresh the table to reflect new data
 
-                addSubjectRow(subjectName, subjectUnits, subjectGrade);
-                updateGWA();
-
+                // Clear input fields
                 nameInput.value = "";
                 unitsInput.value = "";
                 gradeInput.value = "";
+            });
+
+            resetButton.addEventListener("click", () => {
+
+                subjects = [];
+
+                const tbody = subjectsTable.querySelector("tbody");
+                tbody.innerHTML = "";
+
+                gwaDisplay.textContent = "N/A";
+            });
+
+            exportButton.addEventListener("click", () => {
+                const csvContent = generateCSV();
+                downloadCSV("subjects.csv", csvContent);
+            });
+
+            importButton.addEventListener("click", () => {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener("change", event => {
+                const file = event.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onload = () => {
+                    try {
+                        const csvContent = reader.result;
+                        const importedSubjects = parseCSV(csvContent);
+                        subjects = [...subjects, ...importedSubjects];
+                        refreshTable();
+                        alert("File imported successfully.");
+                    } catch (error) {
+                        alert("Error importing file. Please ensure it is a valid CSV.");
+                    }
+                };
+                reader.readAsText(file);
             });
         });
     </script>
@@ -104,6 +178,13 @@
             </table>
 
             <h2>GWA: <span id="gwa-display">N/A</span></h2>
+
+            <div class="file-actions">
+                <button id="reset-field">Reset Calculator</button>
+                <button id="export-csv">Export CSV</button>
+                <button id="import-csv">Import CSV</button>
+                <input type="file" id="file-input" style="display: none;" accept=".csv">
+            </div>
         </section>
     </main>
 
