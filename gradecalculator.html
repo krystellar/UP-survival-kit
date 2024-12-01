@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const subjectsTable = document.getElementById("subjects-table");
+            const gwaDisplay = document.getElementById("gwa-display");
+            const addButton = document.getElementById("add-subject");
+
+            let subjects = [];
+
+            function updateGWA() {
+                let totalUnits = 0;
+                let weightedSum = 0;
+
+                subjects.forEach(subject => {
+                    totalUnits += subject.units;
+                    weightedSum += subject.grade * subject.units;
+                });
+
+                const gwa = totalUnits > 0 ? (weightedSum / totalUnits).toFixed(2) : "N/A";
+                gwaDisplay.textContent = gwa;
+            }
+
+            function addSubjectRow(subjectName, subjectUnits, subjectGrade) {
+                const row = subjectsTable.insertRow();
+
+                const nameCell = row.insertCell(0);
+                const unitsCell = row.insertCell(1);
+                const gradeCell = row.insertCell(2);
+
+                nameCell.textContent = subjectName;
+                unitsCell.textContent = subjectUnits;
+                gradeCell.textContent = subjectGrade;
+            }
+
+            addButton.addEventListener("click", () => {
+                const nameInput = document.getElementById("subject-name");
+                const unitsInput = document.getElementById("subject-units");
+                const gradeInput = document.getElementById("subject-grade");
+
+                const subjectName = nameInput.value.trim();
+                const subjectUnits = parseFloat(unitsInput.value);
+                const subjectGrade = parseFloat(gradeInput.value);
+
+                if (!subjectName || isNaN(subjectUnits) || isNaN(subjectGrade)) {
+                    alert("Please fill out all fields correctly.");
+                    return;
+                }
+
+                subjects.push({ name: subjectName, units: subjectUnits, grade: subjectGrade });
+
+                addSubjectRow(subjectName, subjectUnits, subjectGrade);
+                updateGWA();
+
+                nameInput.value = "";
+                unitsInput.value = "";
+                gradeInput.value = "";
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="studentlife.html">Student Life</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Grade Calculator</h1>
+            <p>Calculate your Grade Weighted Average (GWA) by entering your subjects below:</p>
+            <div class="input-section">
+                <label for="subject-name">Subject Name:</label>
+                <input type="text" id="subject-name" placeholder="e.g., Math 101">
+                <label for="subject-units">Units:</label>
+                <input type="number" id="subject-units" placeholder="e.g., 3">
+                <label for="subject-grade">Final Grade:</label>
+                <input type="number" step="0.01" id="subject-grade" placeholder="e.g., 1.75">
+                <button id="add-subject">Add Subject</button>
+            </div>
+
+            <h2>Subjects List</h2>
+            <table id="subjects-table" border="1">
+                <thead>
+                    <tr>
+                        <th>Subject Name</th>
+                        <th>Units</th>
+                        <th>Final Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Subjects will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <h2>GWA: <span id="gwa-display">N/A</span></h2>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="branding">
+                <img src="up-logo.png" alt="University of the Philippines Logo">
+                <p>University of the Philippines - Padayon, Isko</p>
+            </div>
+            <div class="contact-info">
+                <p>Contact Us:
+                    <a href="mailto:kmperez3@up.edu.ph">kmperez3@up.edu.ph</a>
+                    <a href="mailto:zcalifornia@up.edu.ph">zcalifornia@up.edu.ph</a>
+                </p>
+                <p>Phone: +63 (2) 8981-8500</p>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com/UPMindanao" target="_blank">Facebook</a>
+                <a href="https://twitter.com/UPMindanao" target="_blank">Twitter</a>
+                <a href="https://instagram.com/UPMindanao" target="_blank">Instagram</a>
+            </div>
+            <div class="legal-info">
+                <p>© 2024 University of the Philippines. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
