@@ -40,13 +40,135 @@
         </div>
         <div class="culture-content">
             <h1>CULTURE AND <br>COMMUNITY</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>The University of the Philippines aims to shape their learners into future leaders through quality education. It has a inclusive and diverse community, aiming to unite each and every individual despite several differences to achieve a harmonious environment in building the future society.</p>
         </div>
-        
+    </section>
+
+    <nav class="section-navbar">
+        <div class="navbar">
+            <a href="javascript:void(0);" onclick="showPage(0)">
+                <div class="title">Student Tips</div>
+            </a>
+            <a href="javascript:void(0);" onclick="showPage(1)">
+                <div class="title">Interactive Campus Map</div>
+            </a>
+            <a href="javascript:void(0);" onclick="showPage(2)">
+                <div class="title">Grade Calculator</div>
+            </a>
+            <a href="javascript:void(0);" onclick="showPage(3)">
+                <div class="title">Clubs & Organizations</div>
+            </a>
+            <a href="javascript:void(0);" onclick="showPage(4)">
+                <div class="title">OSA Sections</div>
+            </a>
+        </div>
+    </nav>
+
+    <section class="page" id="tips">
+        <div class="tips-container">
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.1</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.2</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.3</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.4</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.5</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="tip-wrapper">
+                <div class="tip">
+                    <h4>TIP NO.6</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="page" style="display:none;">
+        <h1>University Map</h1>
+        <div class="map-and-info-container">
+            <div class="map-container">
+                <img src="image map.jpg" usemap="#image-map" class="campus-map">
+                <map name="image-map">
+                    <area target="" alt="Kalimudan" title="Kalimudan" href="" coords="189.06,420.06,24.06" shape="circle" class="map-area" data-title="Kalimudan Building" data-description="Kalimudan Student Center is where food and drink stalls are located. Students usually spend their meal time here." data-image="kalimudan.jpg">
+                    <area target="" alt="Dorm and ILC" title="Dorm and ILC" href="" coords="96.44,278.12,12.5" shape="circle" class="map-area" data-title="Dormitory and Interactive Learning Center" data-description="Elias B Lopez Dormitory Hall provides accomodation for students. This is where the clinic is also located which is open from 8 AM - 5 PM during weekdays only.The Interactive Learning Center provides a dynamic educational environment designed to engage students in hands-on, technology-driven learning experiences." data-image="dorm.jpg">
+                    <area target="" alt="Admin / CHSS Bldg" title="Admin / CHSS Bldg" href="" coords="247.19,288.97,38.75" shape="circle" class="map-area" data-title="Admin and CHSS Building" data-description="Administrative offices, such as offices of registrar, cashier, student affairs, are located in this building. Subjects under the Humanities and Social Sciences are held in this building." data-image="admin_chss.jpg">
+                    <area target="" alt="CSM" title="CSM" href="" coords="75.44,145.88,37.5" shape="circle" class="map-area" data-title="College of Science and Math" data-description="Subjects under the Science and Mathematics are held in this building. This building houses several laboratories for hands-on discussions." data-image="csm.jpg">
+                    <area target="" alt="Sports Complex" title="Sports Complex" href="" coords="104.38,78.64,5.625" shape="circle" class="map-area" data-title="Sports Complex" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="sportscom.jpg">
+                    <area target="" alt="Library" title="Library" href="" coords="199.44,228.81,14.06" shape="circle" class="map-area" data-title="University Library" data-description="A dedicated space to the collection, preservation, and sharing of books, digital resources, and other educational materials. " data-image="library.jpg">
+                    <area target="" alt="Cultural Complex" title="Cultural Complex" href="" coords="318.75,154.14,6.875" shape="circle" class="map-area" data-title="Cultural Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="cultural complex.jpg">
+                    <area target="" alt="SOM" title="SOM" href="" coords="342.5,282.52,5.31" shape="circle" class="map-area" data-title="School of Management" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="som.jpg">
+                </map>            
+            </div>
+            <div class="location-info">
+                <h3 id="location-title">Location Description</h3>
+                <p id="location-description">Hover over a map area to see the description.</p>
+                <img id="location-image" src="">
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="page" style="display:none;">
+        <h1>Grade Calculator</h1>
+        <p>Calculate your Grade Weighted Average (GWA) by entering your subjects below:</p>
+        <div class="input-section">
+            <label for="subject-name">Subject Name:</label>
+            <input type="text" id="subject-name" placeholder="e.g., Math 101">
+            <label for="subject-units">Units:</label>
+            <input type="number" id="subject-units" placeholder="e.g., 3">
+            <label for="subject-grade">Final Grade:</label>
+            <input type="number" step="0.01" id="subject-grade" placeholder="e.g., 1.75">
+            <button id="add-subject">Add Subject</button>
+        </div>
+
+        <h2>Subjects List</h2>
+        <table id="subjects-table" style="border:1px">
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Units</th>
+                    <th>Final Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Subjects will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <h2>GWA: <span id="gwa-display">N/A</span></h2>
+
+        <div class="file-actions">
+            <button id="reset-field">Reset Calculator</button>
+            <button id="export-csv">Export CSV</button>
+            <button id="import-csv">Import CSV</button>
+            <input type="file" id="file-input" style="display: none;" accept=".csv">
+        </div>
     </section>
     
-    <div class="clubs">
+    <section id="clubs" class="page" style="display:none;">
         <h1>CLUBS AND ORGANIZATIONS</h1>
+        <h5>The University of the Philippines is home to many student organizations where students can develop their leadership, interpersonal, and academic skills and knowledge.</h5>
         <div class="club-scroll-container">
             <div class="org-titles">
                 <div class="club-item" data-index="0">
@@ -147,33 +269,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
-    <div class="map">
-        <h1>University Map</h1>
-        <div class="map-and-info-container">
-            <div class="map-container">
-                <img src="image map.jpg" usemap="#image-map" class="campus-map">
-                <map name="image-map">
-                    <area target="" alt="Kalimudan" title="Kalimudan" href="" coords="189.06,420.06,24.06" shape="circle" class="map-area" data-title="Kalimudan Building" data-description="Kalimudan Student Center is where food and drink stalls are located. Students usually spend their meal time here." data-image="kalimudan.jpg">
-                    <area target="" alt="Dorm and ILC" title="Dorm and ILC" href="" coords="96.44,278.12,12.5" shape="circle" class="map-area" data-title="Dormitory and Interactive Learning Center" data-description="Elias B Lopez Dormitory Hall provides accomodation for students. This is where the clinic is also located which is open from 8 AM - 5 PM during weekdays only.The Interactive Learning Center provides a dynamic educational environment designed to engage students in hands-on, technology-driven learning experiences." data-image="dorm.jpg">
-                    <area target="" alt="Admin / CHSS Bldg" title="Admin / CHSS Bldg" href="" coords="247.19,288.97,38.75" shape="circle" class="map-area" data-title="Admin and CHSS Building" data-description="Administrative offices, such as offices of registrar, cashier, student affairs, are located in this building. Subjects under the Humanities and Social Sciences are held in this building." data-image="admin_chss.jpg">
-                    <area target="" alt="CSM" title="CSM" href="" coords="75.44,145.88,37.5" shape="circle" class="map-area" data-title="College of Science and Math" data-description="Subjects under the Science and Mathematics are held in this building. This building houses several laboratories for hands-on discussions." data-image="csm.jpg">
-                    <area target="" alt="Sports Complex" title="Sports Complex" href="" coords="104.38,78.64,5.625" shape="circle" class="map-area" data-title="Sports Complex" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="sportscom.jpg">
-                    <area target="" alt="Library" title="Library" href="" coords="199.44,228.81,14.06" shape="circle" class="map-area" data-title="University Library" data-description="A dedicated space to the collection, preservation, and sharing of books, digital resources, and other educational materials. " data-image="library.jpg">
-                    <area target="" alt="Cultural Complex" title="Cultural Complex" href="" coords="318.75,154.14,6.875" shape="circle" class="map-area" data-title="Cultural Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="cultural complex.jpg">
-                    <area target="" alt="SOM" title="SOM" href="" coords="342.5,282.52,5.31" shape="circle" class="map-area" data-title="School of Management" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="som.jpg">
-                </map>            
-            </div>
-            <div class="location-info">
-                <h3 id="location-title">Location Description</h3>
-                <p id="location-description">Hover over a map area to see the description.</p>
-                <img id="location-image" src="">
-            </div>
-        </div>
-    </div>
-    
-    <div class="facilities">
+    <section id="facilities" class="page" style="display:none;">
         <div class="facilities-container">
             <h1>Office of Student Affairs Sections</h1>
             <ul>
@@ -208,46 +306,6 @@
         </div>
     </div>
 
-    <section id="tips">
-        <div class="tips-container">
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.1</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.2</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.3</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.4</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.5</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="tip-wrapper">
-                <div class="tip">
-                    <h4>TIP NO.6</h4>
-                    <p>Lorem Ipsum</p>
-                </div>
-            </div>
-        </div>
-    </section>
     
     
     
