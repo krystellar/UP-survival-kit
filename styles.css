@@ -12,7 +12,7 @@ h1 {
 }
 
 #first-look {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(upmingb.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(pics/upmingb.png);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,7 +182,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(studentsbg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pics/studentsbg.jpg);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -190,34 +190,6 @@ h1 {
     color: white;
     text-align: center;
     box-sizing: border-box;
-}
-
-.culture-pics {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.culture-pic {
-    flex: 1;
-    max-width: 30%;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.culture-pic:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.culture-pic img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
 }
 
 .culture-content {
@@ -228,6 +200,7 @@ h1 {
 }
 
 .culture-content h1 {
+    margin-top: 45vh;
     font-size: 3rem;
     line-height: 1.2;
     color: #f1c40f;
@@ -245,10 +218,12 @@ h1 {
 /* section navbar */
 
 .section-navbar .navbar {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     justify-content: center;
-    background-color:#9b1b30;
+    background-color:#006747;
     padding: 10px 0;
+    border-bottom:#f1c40f 1px solid;
 }
   
 .section-navbar .navbar a {
@@ -259,13 +234,8 @@ h1 {
 }
   
 .section-navbar .navbar a:hover {
-    background-color: #006747;
-    color:#f39c12;
-}
-
-.section-navbar .navbar a:active {
-    background-color: #006747;
-    color:#f39c12;
+    background-color: #f39c12;
+    color: #006747;
 }
 
 .page {
@@ -275,8 +245,378 @@ h1 {
     display: block;
 }
 
-/* clubs and orgs */
+/*Student tips*/
 
+#tips {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+    overflow:hidden;
+    z-index:10;
+    padding: 30px 50px;
+}
+
+#tips h2 {
+    font-size:48px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#9b1b30;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tip-wrapper {
+    background-color: #9b1b30;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.tip h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #f1c40f;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tip p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+
+/* interactive map */
+#map {
+    text-align: center;
+    padding: 20px;
+    background-color:#9b1b30;
+    height: 150vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#map h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.map-and-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.map-container {
+    position: relative;
+}
+
+.campus-map {
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.campus-map:hover {
+    transform: scale(1.05);
+}
+
+.location-info {
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 650px;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.3s ease;
+}
+
+.location-info:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#location-title {
+    color: #9b1b30;
+    font-size: 28px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#location-description {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#location-image {
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.map-area {
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-area:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.map-area:hover ~ .location-info #location-title,
+.map-area:hover ~ .location-info #location-description {
+    display: block;
+}
+
+/* grade calc */
+
+#calculator {
+    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pics/upmingb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    z-index: 10;
+    overflow:hidden;
+}
+
+#calculator h2 {
+    font-size: 48px;
+    color: #9b1b30;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.calculator-container {
+    background-color:#ddd;
+    padding: 20px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    margin-bottom: 30px;
+    padding:12px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-section input:focus {
+    border-color: #006747; 
+    background-color: #fff;
+    outline: none;
+}
+
+.input-section button {
+    width: 100%;
+    padding: 12px;
+    background-color: #006747; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #f1c40f;
+    color:#2c3e50;
+}
+
+#subjects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+#subjects-table th, #subjects-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#subjects-table th {
+    background-color: #f1c40f;  
+    color: #2c3e50;
+}
+
+#subjects-table td {
+    background-color: #fff;
+}
+
+#gwa-display {
+    font-size: 24px;
+    font-weight: 700;
+    color: #9b1b30;
+}
+
+.file-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.file-actions button {
+    padding: 12px;
+    background-color: #006747;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.file-actions button:last-child {
+    margin-right: 0;
+}
+
+.file-actions button:hover {
+    background-color: #f39c12;
+    color:#2c3e50;
+}
+
+.file-actions input[type="file"] {
+    display: none;
+}
+
+/* Programs */
+.acad-container {
+    border: 1px solid #ccc;
+    margin: 10px 40px;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.college {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #9b1b30;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.college:hover {
+    background-color: #cc2c47;
+}
+
+.program {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+}
+
+.program ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.program li {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.program li:hover {
+    background-color: #d3d3d3;
+}
+
+/* Clubs */
 #clubs {
     width: 100%;
     margin: 0 auto;
@@ -287,33 +627,79 @@ h1 {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 }
 
-#clubs h1 {
-    font-size: 3.5rem;
+#clubs h2 {
+    font-size: 48px;
     font-weight: bold;
     color: #9b1b30;
     margin-bottom: 30px;
-    text-transform: uppercase;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.club-container {
+    display: grid;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.org-titles{
+    display:flex;
+    gap:10px;
 }
 
 .club-scroll-container {
     display: flex;
     gap: 20px;
-    overflow-x: auto; 
-    padding-bottom: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     flex-wrap: nowrap;
+    position: relative;
 }
 
 .club-scroll-container::-webkit-scrollbar {
     display: none;
 }
 
-.org-titles{
-    display:flex;
-    gap:10px;
+.club-nav {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.arrow-btn {
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.arrow-btn:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 0;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
 }
 
 .club-item {
@@ -330,7 +716,8 @@ h1 {
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    flex-shrink:0;
+    flex-shrink: 0;
+    margin-right: 10px;
 }
 
 .club {
@@ -377,86 +764,6 @@ h1 {
 .club-item:hover .club-description {
     visibility: visible;
     opacity: 1;
-}
-
-/* interactive map */
-
-#map {
-    text-align: center;
-    padding: 15px 15px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(upmingb.png);
-    height: 130vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
-
-.map h1 {
-    font-size: 3rem;
-    color: #f1c40f;
-    margin-bottom: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.map-and-info-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 20px; 
-}
-
-.campus-map {
-    width: 400px;
-    height: 600px;
-    object-fit: contain;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.location-info {
-    padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    max-width: 600px; 
-    font-size: 1.1rem;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#location-title{
-    color: #9b1b30;
-    font-size: 24px;
-}
-#location-description {
-    font-size: 1.2rem;
-    color: #333333;
-    font-weight: 500;
-}
-#location-image{
-    height: 400px;
-    width: auto;
-    border-radius:10px;
-}
-
-.map-area {
-    cursor: pointer;
-    outline: none;
-}
-
-.map-area:hover {
-    outline: 2px solid #f1c40f;
-}
-
-.map-area:hover ~ .location-info #location-title #location-description {
-    display: block;
 }
 
 /* facilities */
@@ -555,66 +862,3 @@ h1 {
     color:#006747;
 }
 
-/*Student tips*/
-
-#tips {
-    margin-top: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.tips-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    width: 80%;
-    max-width: 1200px;
-    padding: 20px;
-}
-
-.tip-wrapper {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tip-wrapper:hover {
-    transform: translateY(-5px);
-}
-
-.tip {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
-}
-
-.tip:hover {
-    transform: scale(1.05);
-}
-
-.tip h4 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.tip p {
-    font-size: 16px;
-    color: #666;
-    margin: 0;
-}
