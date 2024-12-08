@@ -119,7 +119,7 @@ h1 {
     background-color:white;
     height: 50px;
 }
-.qualitypolicy {
+#qualitypolicy {
     background-color:white;
     height:90%;
     position:relative;
@@ -132,7 +132,7 @@ h1 {
     padding: 20px 30px 30px 30px;
 }
 
-.qualitypolicy h1 {
+#qualitypolicy h1 {
     color: #006747;
     text-align: center;
 }
@@ -907,4 +907,3 @@ h1 {
     background-color: #f1c40f;
     color:#006747;
 }
-
