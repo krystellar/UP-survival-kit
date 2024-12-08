@@ -15,9 +15,9 @@ Cmsc 3 final requirement
 
 [] student life
     <X> culture and community
-    <X> clubs and organizations
+    <X> programs and organizations
     <x> interactive map
     <x> facilities
     <x> OSA services
-    <> student's survival tip
-    <> grade calculator (!!IMPORTANT!!)
+    <x> student's survival tip
+    <x> grade calculator (!!IMPORTANT!!)

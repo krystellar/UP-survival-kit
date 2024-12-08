@@ -89,6 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const locationTitle = document.getElementById('location-title');
     const locationDescription = document.getElementById('location-description');
     const locationImage = document.getElementById('location-image');
+
+    locationImage.style.display = 'none';
+    locationImage.src = '';
+
     mapAreas.forEach(area => {
         area.addEventListener('mouseenter', function() {
             const title = area.getAttribute('data-title');
@@ -97,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             locationTitle.textContent = title;
             locationDescription.textContent = description;
             locationImage.src = image;
+            locationImage.style.display = 'block';
         });
     });
 });
