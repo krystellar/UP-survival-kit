@@ -8,10 +8,8 @@ Cmsc 3 final requirement
 
 [] homepage
     <x> up quality policy
-    <x> news and announcement
-    <> up mindanao history (optional)
+    <> up vission and mission
     <> up naming mahal
-    <> emails to remember
 
 [] student life
     <X> culture and community

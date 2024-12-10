@@ -1,4 +1,4 @@
-// for the whole page
+// whole page
 document.addEventListener("DOMContentLoaded", function() {
     showPage(0);
 });
@@ -14,6 +14,19 @@ function showPage(pageIndex) {
         console.log(`Page with index ${pageIndex} not found.`);
     }
 }
+
+// nav bar
+window.onscroll = function() {
+    const navbar = document.querySelector('.navbar');
+    const heroHeight = document.getElementById('hero').offsetHeight;
+    
+    if (window.pageYOffset > heroHeight) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};
+
 
 // for the progs
 const collegeHeaders = document.querySelectorAll('.college');
