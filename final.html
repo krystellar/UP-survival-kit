@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UP WE GO | The Isko's Guide to UP Mindanao</title>
     <link rel="stylesheet" href="final.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -93,7 +94,7 @@
             <section id="student-life">
                 <div class="sl-content">
                     <h1>STUDENT LIFE</h1>
-                    <p>The University of the Philippines aims to shape their learners into future leaders through quality education. It has a inclusive and diverse community, aiming to unite each and every individual despite several differences to achieve a harmonious environment in building the future society.</p>
+                    <p>The University of the Philippines aims to shape their learners into future leaders through quality education. It has an inclusive and diverse community, aiming to unite each and every individual despite several differences to achieve a harmonious environment in building the future society.</p>
                 </div>
             </section>
         
@@ -179,46 +180,62 @@
                     </div>
                 </div>
             </section>
-        
+
             <section id="map" class="page" style="display:none;">
-                <h2>University Map</h2>
+                <h2>Campus Map</h2>
+                <p>
+                    University of the Philippines - Mindanao Campus is located at Tugbok, Mintal, Davao City. <br>
+                    <strong>IKOT</strong> is a transportation service for students to travel from building to building within the campus.
+                </p>
                 <div class="map-and-info-container">
                     <div class="map-container">
-                        <img src="pics/image map.jpg" usemap="#image-map" class="campus-map" alt="Campus Map">
+                        <img src="pics/campus-map.PNG" usemap="#image-map" id="campus-map" loading="lazy">
                         <map name="image-map">
-                            <area target="" alt="Kalimudan" title="Kalimudan" href="" coords="189.06,420.06,24.06" shape="circle" class="map-area" data-title="Kalimudan Building" data-description="Kalimudan Student Center is where food and drink stalls are located. Students usually spend their meal time here." data-image="pics/kalimudan.jpg">
-                            <area target="" alt="Dorm and ILC" title="Dorm and ILC" href="" coords="96.44,278.12,12.5" shape="circle" class="map-area" data-title="Dormitory and Interactive Learning Center" data-description="Elias B Lopez Dormitory Hall provides accommodation for students. This is where the clinic is also located which is open from 8 AM - 5 PM during weekdays only.The Interactive Learning Center provides a dynamic educational environment designed to engage students in hands-on, technology-driven learning experiences." data-image="pics/dorm.jpg">
-                            <area target="" alt="Admin / CHSS Bldg" title="Admin / CHSS Bldg" href="" coords="247.19,288.97,38.75" shape="circle" class="map-area" data-title="Admin and CHSS Building" data-description="Administrative offices, such as offices of registrar, cashier, student affairs, are located in this building. Subjects under the Humanities and Social Sciences are held in this building." data-image="pics/admin_chss.jpg">
-                            <area target="" alt="CSM" title="CSM" href="" coords="75.44,145.88,37.5" shape="circle" class="map-area" data-title="College of Science and Math" data-description="Subjects under the Science and Mathematics are held in this building. This building houses several laboratories for hands-on discussions." data-image="pics/csm.jpg">
-                            <area target="" alt="Sports Complex" title="Sports Complex" href="" coords="104.38,78.64,5.625" shape="circle" class="map-area" data-title="Sports Complex" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="pics/sportscom.jpg">
-                            <area target="" alt="Library" title="Library" href="" coords="199.44,228.81,14.06" shape="circle" class="map-area" data-title="University Library" data-description="A dedicated space to the collection, preservation, and sharing of books, digital resources, and other educational materials." data-image="pics/library.jpg">
-                            <area target="" alt="Cultural Complex" title="Cultural Complex" href="" coords="318.75,154.14,6.875" shape="circle" class="map-area" data-title="Cultural Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="pics/cultural complex.jpg">
-                            <area target="" alt="SOM" title="SOM" href="" coords="342.5,282.52,5.31" shape="circle" class="map-area" data-title="School of Management" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="pics/som.jpg">
-                        </map>            
+                            <area target="" alt="aquatics-center" title="aquatics-center" href="" coords="523,830,376,626" shape="rect" class="map-area" data-title="Aquatics Center" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="pics/sportscom.jpg">
+                            <area target="" alt="sports-complex" title="sports-complex" href="" coords="157,89,541,490" shape="rect" class="map-area" data-title="Sports Complex" data-description="The Sports Complex is a dedicated facility to accommodate physical and athletic activities. It includes multiple specialized areas such as indoor and outdoor fields, courts, tracks, and fitness centers." data-image="pics/sportscom.jpg">
+                            <area target="" alt="csm" title="csm" href="" coords="1319,548,1573,741" shape="rect" class="map-area" data-title="College of Science and Math" data-description="Subjects under the Science and Mathematics are held in this building. This building houses several laboratories for hands-on discussions." data-image="pics/csm.jpg">
+                            <area target="" alt="carim-complex" title="carim-complex" href="" coords="1659,401,1899,530" shape="rect"  class="map-area" data-title="CARIM Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="pics/cultural complex.jpg">
+                            <area target="" alt="cultural-complex" title="cultural-complex" href="" coords="1994,66,2207,185" shape="rect"  class="map-area" data-title="Cultural Complex" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="pics/cultural complex.jpg">
+                            <area target="" alt="som" title="som" href="" coords="2481,29,2648,141" shape="rect" class="map-area" data-title="School of Management" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." data-image="pics/som.jpg">
+                            <area target="" alt="library" title="library" href="" coords="2438,438,2579,522" shape="rect" class="map-area" data-title="University Library" data-description="A dedicated space to the collection, preservation, and sharing of books, digital resources, and other educational materials." data-image="pics/library.jpg">
+                            <area target="" alt="admin" title="admin" href="" coords="2648,236,2896,453" shape="rect" class="map-area" data-title="Admin and CHSS Building" data-description="Administrative offices, such as offices of registrar, cashier, student affairs, are located in this building. Subjects under the Humanities and Social Sciences are held in this building." data-image="pics/admin_chss.jpg">
+                            <area target="" alt="ebl" title="ebl" href="" coords="2646,608,2888,761" shape="rect"  class="map-area" data-title="Dormitory and Interactive Learning Center" data-description="Elias B Lopez Dormitory Hall provides accommodation for students. This is where the clinic is also located which is open from 8 AM - 5 PM during weekdays only.The Interactive Learning Center provides a dynamic educational environment designed to engage students in hands-on, technology-driven learning experiences." data-image="pics/dorm.jpg">
+                            <area target="" alt="kalimudan" title="kalimudan" href="" coords="3078,386,3208,519" shape="rect" class="map-area" data-title="Kalimudan Building" data-description="Kalimudan Student Center is where food and drink stalls are located. Students usually spend their meal time here." data-image="pics/kalimudan.jpg">
+                        </map>
                     </div>
                     <div class="location-info">
-                        <h3 id="location-title">Location Description</h3>
-                        <p id="location-description">Hover over a map area to see the description.</p>
-                        <img id="location-image" src="" alt="">
-                    </div>
+                        <div class="image-wrapper">
+                            <img id="location-image" src="pics/upmingb.png" alt="Location Image">
+                        </div>
+                        <div class="desc-item">
+                            <h3 id="location-title">Welcome to the Campus!</h3>
+                            <p id="location-description">Hover over a map area to see the description.</p>
+                        </div>
+                    </div>        
                 </div>
             </section>
         
             <section id="calculator" class="page" style="display:none;">
+                <h2>Grade Calculator</h2>
                 <div class="calculator-container">
-                    <h2>Grade Calculator</h2>
                     <p>Calculate your Grade Weighted Average (GWA) by entering your subjects below:</p>
                     <div class="input-section">
-                        <label for="subject-name">Subject Name:</label>
-                        <input type="text" id="subject-name" placeholder="e.g., Math 101">
-                        <label for="subject-units">Units:</label>
-                        <input type="number" id="subject-units" placeholder="e.g., 3">
-                        <label for="subject-grade">Final Grade:</label>
-                        <input type="number" step="0.01" id="subject-grade" placeholder="e.g., 1.75">
-                        <button id="add-subject">Add Subject</button>
+                        <div class="input-item">
+                            <label for="subject-name">Subject Name:</label>
+                            <input type="text" id="subject-name" placeholder="e.g., Math 101">
+                        </div>
+                        <div class="input-item">
+                            <label for="subject-units">Units:</label>
+                            <input type="number" id="subject-units" placeholder="e.g., 3">
+                        </div>
+                        <div class="input-item">
+                            <label for="subject-grade">Final Grade:</label>
+                            <input type="number" step="0.01" id="subject-grade" placeholder="e.g., 1.75">
+                        </div>
                     </div>
+                    <button id="add-subject">Add Subject</button>
         
-                    <h2>Subjects List</h2>
+                    <h3>Subjects List</h3>
                     <table id="subjects-table" style="border:1px">
                         <thead>
                             <tr>
@@ -232,7 +249,7 @@
                         </tbody>
                     </table>
         
-                    <h2>GWA: <span id="gwa-display">N/A</span></h2>
+                    <h3>GWA: <span id="gwa-display">N/A</span></h3>
         
                     <div class="file-actions">
                         <button id="reset-field">Reset Calculator</button>
@@ -244,22 +261,37 @@
             </section>
             
             <section id="progs-orgs" class="page" style="display:none;">
-                <h2>Academic Programs</h2>
+                <h2>Undergraduate <br>Academic Programs</h2>
                 <div class="acad-container">
                     <div class="college">
                         <h3>College of Humanities and Social Sciences</h3>
                     </div>
                     <div class="programs">
                         <ul>
-                            <li>BS Anthropology</li>
-                            <li>BS Architecture</li>
-                            <li>BA Communication and Media Arts</li>
-                            <li>BA English</li>
-                            <li>Diploma in Exercise and Sports Science</li>
-                            <li>Diploma/Master in Urban and Regional Planning</li>
-                            <li>Bachelor of Sports Science</li>
-                            <li>Associate in Arts in Sports Science</li>
-                            <li>MS Human Movement Science</li>
+                            <li>
+                                <strong>BS Anthropology</strong><br>
+                                <p>Anthropology is a social science that explores society and humanity from a bio-cultural and cross-cultural approach. The program is designed to provide students with training, field experience, and hands-on exposure to methods of anthropological research and visual documentation of different cultural life ways, both local and globally.</p>
+                            </li>
+                            <li>
+                                <strong>BS Architecture</strong><br>
+                                <p>The BS Architecture program trains students to be professional architects with a high sense of social and cultural awareness that is the result of five years of study in construction and building technology, architectural history and critical theory, and urban and regional planning.</p>
+                            </li>
+                            <li>
+                                <strong>BA Communication and Media Arts</strong>
+                                <p>The BA Communication and Media Arts (BACMA) program trains students to be effective and savvy communication and media specialists who use their skills critically, creatively, and imaginatively, while imbuing social consciousness to become leaders in their own field who will contribute to nation-building and uphold social justice.</p>
+                            </li>
+                            <li>
+                                <strong>BA English</strong>
+                                <p>The BA English program trains students to become critical and creative thinkers who are skilled not just in the production of creative works but also in the practice of the English language in the global setting.</p>
+                            </li>
+                            <li>
+                                <strong>Bachelor of Sports Science</strong>
+                                <p>The Bachelor of Sports Science is a four-year underrgaduate program that aims to develop competent individuals able to funciton effectively as systematic science-oriented sports specialists. It also serves as a pre-med course.</p>
+                            </li>
+                            <li>
+                                <strong>Associate in Arts in Sports Science</strong>
+                                <p>A two-year pre-baccalaureate program that allowa athletically inclined K-12 graduates to puruse a career in sports development and sports science through a unique selection process. It does not require taking the UPCAT and the tuition is FREE. Graduates of AASS may proceed to Bachelor of Sports Science as 3rd-year students through a ladderized program.</p>
+                            </li>
                         </ul>
                     </div>
                     <div class="college">
@@ -267,12 +299,26 @@
                     </div>
                     <div class="programs">
                         <ul>
-                            <li>BS Applied Mathematics</li>
-                            <li>BS Biology</li>
-                            <li>BS Computer Science</li>
-                            <li>BS Data Science</li>
-                            <li>BS Food Technology</li>
-                            <li>MS Food Science</li>
+                            <li>
+                                <strong>BS Applied Mathematics</strong>
+                                <p>The BS Applied Mathematics program is designed to prepare the students to work in industry, commerce, banks, the public sector and the academe. The students have also the opportunity to develop their written and oral communication skills, interpersonal relationships, and teaching abilities. The goal of this program is to produce dynamic, adaptive, highly competent graduates with strong mathematical and computational skills, and research capabilities.</p>
+                            </li>
+                            <li>
+                                <strong>BS Biology</strong>
+                                <p>The program offers a learning experience that encompasses the theoretical, quantitative, and applied aspects of the biological sciences. The strong foundation courses, the intensive practical laboratory and field experiences, and elective courses prepare the students for careers in scientific research, medicine, education, policy-making, environmental management, and several related fields in the country and the world. </p>
+                            </li>
+                            <li>
+                                <strong>BS Computer Science</strong>
+                                <p>The program was instituted in UP Mindanao in 1998 in response to the increasing demand for highly skilled and capable IT professionals in the region. This program aims to produce graduates who are prepared for research and instruction activities related to the discipline and advanced studies in CS and trained to develop software systems.</p>
+                            </li>
+                            <li>
+                                <strong>BS Data Science</strong>
+                                <p>The Bachelor of Science in Data Science prepares students to analyze, interpret, and visualize complex data. It combines knowledge of statistics, machine learning, and computational techniques to equip students with the skills needed to solve real-world problems using data. The program focuses on data processing, modeling, and the use of modern tools and technologies, while also developing critical thinking and communication abilities for success in data-driven careers.</p>
+                            </li>
+                            <li>
+                                <strong>BS Food Technology</strong>
+                                <p>BS Food Technology is a 4-year program that seeks to train students to be the prime movers of the food industry. The program focuses on providing students with appropriate knowledge, skills, and technique of the foundation courses of food technology in the interest of developing new food products, processes, and innovative food systems. </p>
+                            </li>
                         </ul>
                     </div>
                     <div class="college">
@@ -280,14 +326,15 @@
                     </div>
                     <div class="programs">
                         <ul>
-                            <li>BS Agribusiness Economics</li>
-                            <li>Master in Management</li>
-                            <li>PhD by Research</li>
+                            <li>
+                                <strong>BS Agribusiness Economics</strong>
+                                <p>The program is based primarily on the needs of Mindanao, particularly in pursuing the island’s role as the country’s food basket amidst the challenges of globalization and international competitiveness.</p>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <h2>Academic Organizations</h2>
-                <p>The University of the Philippines is home to many student organizations where students can develop their leadership, interpersonal, and academic skills and knowledge.</p>
+                <p>The University of the Philippines is home to many student organizations<br>where students can develop their leadership, interpersonal, and academic skills and knowledge.</p>
                 <div class="club-container">
                     <div class="club-scroll-container">
                         <div class="org-titles">
@@ -378,8 +425,8 @@
             </section>
             
             <section id="facilities" class="page" style="display:none;">
+                <h2>Office of <br>Student Affairs Sections</h2>
                 <div class="facilities-container">
-                    <h2>Office of Student Affairs Sections</h2>
                     <ul>
                         <li class="shs-container">
                             <div class="shs-content">
@@ -414,8 +461,33 @@
         </div>
     </main>
     <footer>
-
+        <div class="footer-container">
+            <div class="branding">
+                <img src="up-logo.png" alt="University of the Philippines Logo">
+                <img src="pics/logo.png">
+                <p>University of the Philippines - Padayon, Isko</p>
+            </div>
+            <div class="contact-info">
+                <p>Contact Us:
+                    <a href="mailto:kmperez3@up.edu.ph">kmperez2@up.edu.ph</a>
+                    <a href="mailto:zwcalifornia@up.edu.ph">zwcalifornia@up.edu.ph</a>
+                </p>
+                <p>Phone: +63 (2) 8981-8500</p>
+            </div>
+            <div class="social-media">
+                <a href="https://facebook.com/UPMindanao" target="_blank">Facebook</a>
+                <a href="mailto:oc.upmindanao@up.edu.ph" target="_blank">Email</a>
+                <a href="https://www2.upmin.edu.ph/" target="_blank">Offical Website</a>
+            </div>
+            <div class="legal-info">
+                <p>© 2024 University of the Philippines. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+    <script src="imageMapResizer.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        imageMapResize();
+    </script>
 </body>
 </html>

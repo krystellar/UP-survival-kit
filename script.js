@@ -27,7 +27,6 @@ window.onscroll = function() {
     }
 };
 
-
 // for the progs
 const collegeHeaders = document.querySelectorAll('.college');
 collegeHeaders.forEach(header => {
@@ -97,14 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // for the interactive map
+
 document.addEventListener('DOMContentLoaded', function () {
     const mapAreas = document.querySelectorAll('.map-area');
     const locationTitle = document.getElementById('location-title');
     const locationDescription = document.getElementById('location-description');
     const locationImage = document.getElementById('location-image');
-
-    locationImage.style.display = 'none';
-    locationImage.src = '';
 
     mapAreas.forEach(area => {
         area.addEventListener('mouseenter', function() {
