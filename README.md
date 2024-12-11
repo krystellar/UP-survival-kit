@@ -6,12 +6,12 @@ Cmsc 3 final requirement
     <> logo
     <> footer
 
-[] homepage
+[x] homepage
     <x> up quality policy
-    <> up vission and mission
-    <> up naming mahal
+    <x> up vission and mission
+    <x> up naming mahal
 
-[] student life
+[x] student life
     <X> culture and community
     <X> programs and organizations
     <x> interactive map
