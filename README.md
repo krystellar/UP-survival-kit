@@ -5,6 +5,7 @@ Cmsc 3 final requirement
     <x> navigation bar
     <> logo
     <> footer
+    <> responsiveness
 
 [x] homepage
     <x> up quality policy

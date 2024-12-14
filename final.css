@@ -1,25 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
+*{
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
-html, body {
+a{
+    text-decoration: none;
+}
+
+html, body{
     background-color: #800000;
-    height: 100%;
+    height:100%;
+    width:100%;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
+    0%{
+        opacity:0;
     }
-    100% {
-        opacity: 1;
+    100%{
+        opacity:1;
     }
 }
 /* nav bar */
-header {
+header{
     position: absolute;
     top: 0;
     left: 0;
@@ -231,7 +236,7 @@ header .navbar a:hover .bar {
     align-items: center;
     padding: 40px 20px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(pics/studentsbg.jpg);
-    height: 115vh;
+    min-height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -259,7 +264,7 @@ header .navbar a:hover .bar {
 }
 
 .sl-content h1 {
-    margin-top: 45vh;
+    margin-top: 30vh;
     font-size: 3rem;
     line-height: 1.2;
     color: #f1c40f;
@@ -277,38 +282,54 @@ header .navbar a:hover .bar {
 .studentlife-nav {
     display: flex;
     flex-direction: column;
-    align-items: center;;
-    height: calc(250px+(250px(30%)));
+    align-items: center;
+    height: 100%;
     justify-content: center;
-    padding: 20px 50px 100px 50px ;
+    padding: 20px 50px 100px 50px;
     background-color: #800000;
     border-bottom: #f1c40f 1px solid;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.studentlife-nav h3{
-    font-size:1.5rem;
-    font-weight:500;
+.studentlife-nav h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
     letter-spacing: 2px;
-    color:#f1c40f;
+    color: #f1c40f;
     text-align: left;
-    margin-top:30px;
-    margin-bottom:40px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .studentlife-navbar {
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
-.nav-item {
+.nav-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 150px;
+    max-width: 200px;
+    margin: 10px;
+}
+
+.nav-item{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.nav-content {
     position: relative;
     width: 150px;
-    height: 250px;
-    text-align: center;
-    overflow: visible;
+    height: 200px;
 }
 
 .nav-background {
@@ -324,20 +345,6 @@ header .navbar a:hover .bar {
     transition: filter 0.3s ease-in-out;
 }
 
-.nav-item .snavbar-title {
-    position: absolute;
-    top: 105%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 1.2rem;
-    font-weight:500;
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-    text-transform: uppercase;
-    z-index: 1;
-    padding: 10px;
-}
-
 .nav-icon-container {
     position: absolute;
     bottom: -15px;
@@ -350,8 +357,21 @@ header .navbar a:hover .bar {
 .nav-icon {
     width: 40px;
     height: 40px;
-    border-radius:25%;
+    border-radius: 25%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.snavbar-title {
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    z-index: 1;
+    padding: 10px;
+    margin-top: 10px;
+    text-align:center;
 }
 
 .nav-item:hover .nav-background {
@@ -362,8 +382,8 @@ header .navbar a:hover .bar {
     transform: scale(1.05);
 }
 
-.nav-item:hover .snavbar-title{
-    color:#f1c40f;
+.nav-item:hover .snavbar-title {
+    color: #f1c40f;
 }
 
 .nav-item:hover .nav-icon-container {
@@ -428,7 +448,7 @@ header .navbar a:hover .bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
+    gap:20px;
 }
 
 .tip h4 {
@@ -998,6 +1018,8 @@ footer {
     font-size: 14px;
     bottom: 0;
     width: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .footer-container {
@@ -1016,7 +1038,8 @@ footer {
 
 .branding p {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight:bold;
 }
 
 .contact-info p {
@@ -1047,4 +1070,330 @@ footer {
 .legal-info p {
     margin-top: 10px;
     font-size: 12px;
+}
+
+/* for responsiveness */
+
+/*tablet size*/
+@media screen and (max-width: 1024px) {
+    #about h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #about ul li {
+        font-size: 1rem;
+    }
+
+    .bottom-sections {
+        margin-top: 30px;
+        gap: 20px;
+    }
+
+    #song, #vision-mission {
+        width: 48%;
+        padding: 15px;
+    }
+
+    #song p, #vision-mission p {
+        font-size: 1rem;
+    }
+}
+/*phone sizes */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 5% 10%; 
+    }
+
+    #about h2 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    #about ul li {
+        font-size: 1rem;
+        padding-left: 15px;
+    }
+
+    .bottom-sections {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 15px;
+    }
+
+    #song, #vision-mission {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #song p, #vision-mission p {
+        font-size: 1rem;
+    }
+    .studentlife-nav {
+        padding: 20px 30px 60px 30px;
+    }
+
+    .studentlife-navbar {
+        gap: 15px;
+    }
+
+    .nav-item-container {
+        flex: 1 1 120px;
+        max-width: 150px;
+    }
+
+    .nav-content {
+        width: 120px;
+        height: 180px;
+    }
+
+    .nav-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .snavbar-title {
+        font-size: 1rem;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    #tips {
+        padding: 20px 30px;
+    }
+    .tips-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+    .tip-wrapper {
+        padding: 15px;
+    }
+    .tip h4 {
+        font-size: 20px;
+    }
+    .tip p {
+        font-size: 14px;
+    }
+    .input-item {
+        width: 48%;
+    }
+
+    .file-actions {
+        flex-direction: column;
+    }
+
+    .file-actions button {
+        margin-bottom: 10px;
+    }
+
+    .file-actions button:last-child {
+        margin-bottom: 0;
+    }
+
+    #subjects-table th, #subjects-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .calculator-container {
+        margin:10px;
+        padding: 15px;
+    }
+
+    #calculator h3 {
+        font-size: 1.5rem;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .input-item {
+        width: 100%;
+    }
+    .college h3{
+        font-size:1rem;
+    }
+    .programs p{
+        font-size:0.8rem;
+    }
+    #facilities {
+        padding: 15px;
+    }
+
+    .facilities-container {
+        padding: 15px;
+        margin: 0 10px;
+    }
+
+    #facilities h3 {
+        font-size: 1.2rem;
+    }
+
+    .shs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shs-container {
+        flex-direction: column;
+    }
+
+    .shs-content {
+        margin-right: 0;
+    }
+
+    .gotoshs {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    #map {
+        padding-top: 10px;
+    }
+
+    .location-info {
+        padding: 15px;
+    }
+
+    #location-title {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    #location-description {
+        font-size: 0.8rem;
+    }
+
+    .image-wrapper {
+        height: 200px;
+    }
+
+    .desc-item {
+        width: 100%;
+        text-align: center;
+    }
+    .map-area {
+        pointer-events: auto;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .branding img {
+        width: 80px;
+    }
+
+    .branding p,
+    .contact-info p,
+    .social-media a,
+    .contact-info a {
+        font-size: 14px;
+    }
+
+    .social-media a,
+    .contact-info a {
+        margin: 0 5px;
+    }
+}
+ /* phone sizes */
+@media screen and (max-width: 480px) {
+    #studentlife h2 {
+        font-size:2rem;
+        margin:10px
+    }
+    #about {
+        padding: 5% 15%;
+    }
+    #about h2 {
+        font-size: 1.4rem;
+    }
+    #about ul li {
+        font-size: 0.9rem;
+    }
+    .bottom-sections {
+        margin-top: 20px;
+        gap: 10px;
+    }
+    #song, #vision-mission {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #song p, #vision-mission p {
+        font-size: 0.9rem;
+    }
+    #tips {
+        padding: 15px 20px;
+    }
+    .tips-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .tip-wrapper {
+        padding: 10px;
+    }
+    .tip h4 {
+        font-size: 18px;
+    }
+    .tip p {
+        font-size: 12px;
+    }
+    .navbar a {
+        font-size: 12px;
+    }
+    #calculator h3 {
+        font-size: 1.2rem;
+    }
+
+    .input-item {
+        width: 100%;
+    }
+    .calculator-container {
+        margin:10px;
+        padding: 10px;
+    }
+
+    #subjects-table th, #subjects-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+    #facilities h3 {
+        font-size: 1rem;
+    }
+
+    .gotoshs {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+        margin-top:10px;
+    }
+    #map h2{
+        padding:15px;
+    }
+    #map p{
+        padding:0 20px 0 20px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .branding img {
+        width: 60px;
+    }
+
+    .branding p,
+    .contact-info p,
+    .social-media a,
+    .contact-info a {
+        font-size: 12px;
+    }
+
+    .social-media a,
+    .contact-info a {
+        margin: 0 3px;
+    }  
 }

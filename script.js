@@ -113,9 +113,37 @@ document.addEventListener('DOMContentLoaded', function () {
             locationImage.src = image;
             locationImage.style.display = 'block';
         });
+
+        area.addEventListener('touchstart', function(event) {
+            const title = area.getAttribute('data-title');
+            const description = area.getAttribute('data-description');
+            const image = area.getAttribute('data-image');
+
+            if (title && description) {
+                locationTitle.textContent = title;
+                locationDescription.textContent = description;
+                locationImage.src = image;
+                locationImage.style.display = 'block';
+            }
+        });
+
+        area.addEventListener('click', function(event) {
+            event.preventDefault();
+            const title = area.getAttribute('data-title');
+            const description = area.getAttribute('data-description');
+            const image = area.getAttribute('data-image');
+            
+            if (title && description) {
+                locationTitle.textContent = title;
+                locationDescription.textContent = description;
+                locationImage.src = image;
+                locationImage.style.display = 'block';
+            } else {
+                return;
+            }
+        });
     });
 });
-
 // for the calc
 
 document.addEventListener("DOMContentLoaded", () => {
